@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "dev": "gatsby develop",
+    "generate": "gatsby build && gatsby serve",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
