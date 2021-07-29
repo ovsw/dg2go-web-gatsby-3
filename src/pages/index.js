@@ -132,7 +132,7 @@ const IndexPage = () => {
     <Layout>
       <main style={pageStyles}>
         <title>Home Page</title>
-        <p className="text-red-600">test</p>
+        <p className="text-green-600">test</p>
 
         <h1 style={headingStyles}>
           Congratulations
