@@ -31,7 +31,7 @@ async function createGenericPages(graphql, actions, reporter) {
 
   pageEdges.forEach((edge, index) => {
     const {
-      id,
+      _id,
       content: { slug = {} },
     } = edge.node;
     const path = `/${slug.current}/`;
@@ -41,7 +41,7 @@ async function createGenericPages(graphql, actions, reporter) {
     createPage({
       path,
       component: require.resolve("./src/templates/generic-page.js"),
-      context: { id },
+      context: { _id },
     });
   });
 }
