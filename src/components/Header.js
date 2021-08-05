@@ -7,15 +7,15 @@ import {
   ChartBarIcon,
   CursorClickIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
+  // PhoneIcon,
+  // PlayIcon,
   RefreshIcon,
   ShieldCheckIcon,
   SupportIcon,
   ViewGridIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
+// import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const solutions = [
   {
@@ -51,10 +51,10 @@ const solutions = [
     icon: RefreshIcon,
   },
 ];
-const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
-];
+// const callsToAction = [
+//   { name: "Watch Demo", href: "#", icon: PlayIcon },
+//   { name: "Contact Sales", href: "#", icon: PhoneIcon },
+// ];
 const resources = [
   {
     name: "Help Center",
@@ -84,19 +84,19 @@ const resources = [
     icon: ShieldCheckIcon,
   },
 ];
-const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
-  {
-    id: 2,
-    name: "How to use search engine optimization to drive traffic to your site",
-    href: "#",
-  },
-  { id: 3, name: "Improve your customer experience", href: "#" },
-];
+// const recentPosts = [
+//   { id: 1, name: "Boost your conversion rate", href: "#" },
+//   {
+//     id: 2,
+//     name: "How to use search engine optimization to drive traffic to your site",
+//     href: "#",
+//   },
+//   { id: 3, name: "Improve your customer experience", href: "#" },
+// ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(" ");
+// }
 
 const Header = () => {
   return (
