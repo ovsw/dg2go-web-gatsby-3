@@ -3,7 +3,21 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "DG2Go Web Gatsby 3",
   },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
+    DEV_WEBPACK_CACHE: false,
+    PRESERVE_FILE_DOWNLOAD_CACHE: false,
+    PARALLEL_SOURCING: false,
+    LMDB_STORE: false,
+  },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Open Sans:400,400i,600,600i,700`, `Raleway:400,800,900`],
+      },
+    },
     {
       resolve: "gatsby-source-sanity",
       options: {
