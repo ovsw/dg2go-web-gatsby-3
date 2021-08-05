@@ -12,33 +12,39 @@ export default function MagSection({ sectionData }) {
       data-v-28b2fd86=""
       data-theme="frame"
       data-theme-color="green"
-      class="[ magSection ] wrapper my-grd lg:flex"
+      className="[ magSection ] wrapper my-grd lg:flex"
     >
-      <div class="[ magSection__image ] relative flex-1 2xl:ml-grd">
-        <GatsbyImage image={sectionImage} />
+      <div className="[ magSection__image ] relative flex-1 2xl:ml-grd">
+        <GatsbyImage
+          image={sectionImage}
+          className="w-full h-full object-cover"
+          alt={image.alt}
+        />
       </div>
 
-      <div class="[ magSection__content ] flex-1 border-4 border-green m-grd p-6 space-y-6 md:border-5 md:p-10 lg:max-w-2xl lg:p-20 lg:my-0 flex flex-col justify-center border-green">
-        <div class="space-y-10">
+      <div className="[ magSection__content ] flex-1 border-4 border-green m-grd p-6 space-y-6 md:border-5 md:p-10 lg:max-w-2xl lg:p-20 lg:my-0 flex flex-col justify-center border-green">
+        <div className="space-y-10">
           <div>
-            <p class="eyebrow text-green-dark"></p>
-            <h2 class="mt-2">{title}</h2>
+            <p className="eyebrow text-green-dark">{eyebrow}</p>
+            <h2 className="mt-2">{title}</h2>
           </div>
 
-          <h3 class="[ subtitle text-xl font-bold ]">{subtitle}</h3>
+          <h3 className="[ subtitle text-xl font-bold ]">{subtitle}</h3>
 
-          <div class="magSection__rteWrapper">
-            <div class="prose text-lg">
+          <div className="magSection__rteWrapper">
+            <div className="prose text-lg">
               <PortableText blocks={_rawText} />
             </div>
           </div>
         </div>
 
-        <div class="magSection__buttonWrapper">
-          <div class="cluster-l">
+        <div className="magSection__buttonWrapper">
+          <div className="cluster-l">
             <div>
-              <a href={button1.url} class="button bg-green-dark text-light">
-                <span class="relative inset-y-0.5 mr-2">{button1.text}</span>
+              <a href={button1.url} className="button bg-green-dark text-light">
+                <span className="relative inset-y-0.5 mr-2">
+                  {button1.text}
+                </span>
               </a>
             </div>
           </div>
