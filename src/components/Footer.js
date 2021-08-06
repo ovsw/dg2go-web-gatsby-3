@@ -7,34 +7,35 @@ import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   return (
-    <footer class="footer bg-green-dark text-light-light pt-20">
-      <div class="container mx-auto px-4 md:px-6 pb-10">
-        <div class="footer__grid md:grid gap-5 md:grid-cols-3 lg:grid-cols-6 space-y-10 md:space-y-0">
+    <footer className="footer bg-green-dark text-light-light pt-20">
+      <div className="container mx-auto px-4 md:px-6 pb-10">
+        <div className="footer__grid md:grid gap-5 md:grid-cols-3 lg:grid-cols-4 space-y-10 md:space-y-0">
           {/* <!-- logos --> */}
-          <div class="footer__logos flex col-span-1 lg:col-span-2 self-center">
-            <a href="/" class="mr-8">
+          <div className="footer__logos flex col-span-1  self-center">
+            <a href="/" className="mr-8">
               <StaticImage
                 src="../images/logos/DG2GO-logo-transparent-white.png"
                 alt="DG2Go Logo"
                 placeholder="tracedSVG"
-                width="200"
+                width={200}
               />
             </a>
           </div>
 
+          {/* <!-- social icons --> */}
+          <SocialLinks wrapperClasses="footer__social-wrapper text-3xl self-center lg:col-span-2 flex space-x-4" />
+
           {/* <!-- phone --> */}
-          <div class="footer__phone self-center lg:col-span-2">
+          <div className="footer__phone self-center">
             <a href="tel:814-684-3538">
-              <span class="uppercase tracking-wider">Call us</span>
+              <span className="uppercase tracking-wider">Call us</span>
               <br />
-              <span class="text-3xl">814-684-3538</span>
+              <span className="text-3xl">814-684-3538</span>
             </a>
           </div>
-          {/* <!-- social icons --> */}
-          <SocialLinks class="footer__social-wrapper text-3xl self-center lg:col-span-2 flex space-x-4" />
 
           {/* <!-- footer address --> */}
-          <div class="footer__address space-y-3 md:col-span-2 py-6 text-light-light max-w-xs">
+          <div className="footer__address space-y-3 py-6 text-light-light max-w-xs">
             <p>DG2GO is a Division of the DelGrosso Family of Companies.</p>
             <p>
               <a href="mailto:dg2goinfo@delgrossos.com">
@@ -49,8 +50,8 @@ const Footer = () => {
           </div>
 
           {/* <!-- menu 1 --> */}
-          <div class="footer__col col1">
-            <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+          <div className="footer__col col1">
+            <p className="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
               Passes &amp; Tickets
             </p>
             <ul>
@@ -70,31 +71,10 @@ const Footer = () => {
           </div>
 
           {/* <!-- menu 2 --> */}
-          <div class="footer__col col2">
-            <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
-              Groups
-            </p>
-            <ul>
-              <li>
-                <Link to="/group-picnics/">Group Picnics</Link>
-              </li>
-              <li>
-                <Link to="/school-picnics/">School Picnics</Link>
-              </li>
-              <li>
-                <Link to="/kids-birthday-parties-at-the-park/">
-                  Birthday Parties
-                </Link>
-              </li>
-              <li>
-                <Link to="/specialty-groups/">Specialty Groups</Link>
-              </li>
-            </ul>
-          </div>
 
           {/* <!-- menu 3 --> */}
-          <div class="footer__col col3">
-            <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+          <div className="footer__col col3">
+            <p className="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
               About
             </p>
             <ul>
@@ -125,8 +105,8 @@ const Footer = () => {
           </div>
 
           {/* <!-- menu 4 --> */}
-          <div class="footer__col col4">
-            <p class="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
+          <div className="footer__col col4">
+            <p className="uppercase text-sm tracking-wider mb-4 mt-6 font-semibold">
               Legal
             </p>
             <ul>
@@ -157,11 +137,11 @@ const Footer = () => {
       </div>
       {/* <!-- end container --> */}
 
-      <div class="footer__bottom bg-green p-4 md:text-center text-sm">
+      <div className="footer__bottom bg-green p-4 md:text-center text-sm">
         <p>
           ©2014-2020 DelGrosso’s Amusement Park, Inc. All Rights Reserved.
-          <span class="hidden md:inline"> | </span>
-          <span class="block mt-3 md:inline">
+          <span className="hidden md:inline"> | </span>
+          <span className="block mt-3 md:inline">
             Website by:
             <a
               href="https://studiorovst.com"

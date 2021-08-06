@@ -5,13 +5,21 @@ module.exports = {
   },
   flags: {
     DEV_SSR: false,
-    FAST_DEV: true,
+    FAST_DEV: false,
     DEV_WEBPACK_CACHE: false,
     PRESERVE_FILE_DOWNLOAD_CACHE: false,
     PARALLEL_SOURCING: false,
     LMDB_STORE: false,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg-icons/,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
