@@ -23,7 +23,10 @@ const Footer = () => {
           </div>
 
           {/* <!-- social icons --> */}
-          <SocialLinks wrapperClasses="footer__social-wrapper text-3xl self-center lg:col-span-2 flex space-x-4" />
+          <SocialLinks
+            wrapperClasses="footer__social-wrapper text-3xl self-center lg:col-span-2 flex space-x-4"
+            itemClasses="mr-4"
+          />
 
           {/* <!-- phone --> */}
           <div className="footer__phone self-center">

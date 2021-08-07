@@ -4,7 +4,7 @@ import FacebookIcon from "../images/svg-icons/icon-fb.svg";
 import InstagramIcon from "../images/svg-icons/icon-instagram.svg";
 
 const SocialLinks = (props) => {
-  const { wrapperClasses = "" } = props;
+  const { wrapperClasses = "", itemClasses = "" } = props;
   return (
     <ul className={wrapperClasses}>
       <li>
@@ -14,7 +14,7 @@ const SocialLinks = (props) => {
           rel="noopener noreferrer"
         >
           <span className="visually-hidden">Facebook Page</span>
-          <FacebookIcon className="text-4xl" />
+          <FacebookIcon className={`text-4xl ${itemClasses}`} />
         </a>
       </li>
       <li>
@@ -24,7 +24,7 @@ const SocialLinks = (props) => {
           rel="noopener noreferrer"
         >
           <span className="visually-hidden">Instagram Page</span>
-          <InstagramIcon className="text-4xl" />
+          <InstagramIcon className={`text-4xl ${itemClasses}`} />
         </a>
       </li>
     </ul>
