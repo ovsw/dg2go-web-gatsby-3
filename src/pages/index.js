@@ -2,19 +2,20 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
+import Hero from "../components/Hero";
 import SectionsManager from "../components/sections/sectionsManager";
 
 // markup
 export default function IndexPage({ data }) {
-  const homePage = data && data.homePage && data.homePage.content;
+  const homePageContent = data && data.homePage && data.homePage.content;
+  const sanityHeroData = homePageContent.hero;
+
   return (
     <Layout>
-      <main>
-        <p className="text-green-600">test</p>
-        {homePage.sections.map((section) => {
-          return <SectionsManager section={section} key={section._key} />;
-        })}
-      </main>
+      <Hero heroData={sanityHeroData} />
+      {homePageContent.sections.map((section) => {
+        return <SectionsManager section={section} key={section._key} />;
+      })}
     </Layout>
   );
 }
@@ -23,6 +24,25 @@ export const query = graphql`
   query SiteHome {
     homePage: sanitySiteHome(_id: { eq: "siteHome" }) {
       content {
+        hero {
+          image {
+            asset {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                height: 500
+                placeholder: NONE
+                fit: CROP
+              )
+            }
+          }
+          button {
+            text
+            url
+          }
+          subTitle
+          title
+          _rawText(resolveReferences: { maxDepth: 5 })
+        }
         seo {
           description
           title
